@@ -1,12 +1,14 @@
 mod control_flow;
 mod functions;
 mod guessing_game;
+mod ownership;
 mod variables;
 
 use control_flow::control_flow;
 use control_flow::fibonacci;
 use control_flow::nested_loops;
 use control_flow::while_loop;
+use ownership::{ownership, ownership2, tuple_ex};
 
 use crate::functions::another_function_params;
 use crate::functions::expression;
@@ -27,7 +29,10 @@ fn main() {
     nested_loops();
     while_loop();
     let x = fibonacci(5);
-    println!("{x}")
+    println!("{x}");
+    ownership();
+    ownership2();
+    tuple_ex();
 }
 
 fn another_function() {

@@ -1,10 +1,16 @@
+mod control_flow;
 mod functions;
 mod guessing_game;
 mod variables;
 
+use control_flow::control_flow;
+use control_flow::fibonacci;
+use control_flow::nested_loops;
+use control_flow::while_loop;
+
 use crate::functions::another_function_params;
-use crate::functions::print_labeled_measurement;
 use crate::functions::expression;
+use crate::functions::print_labeled_measurement;
 use crate::guessing_game::guessing_game;
 use crate::variables::enter_array;
 use crate::variables::variables;
@@ -17,6 +23,11 @@ fn main() {
     another_function_params(5);
     print_labeled_measurement(123, 't');
     expression();
+    control_flow();
+    nested_loops();
+    while_loop();
+    let x = fibonacci(5);
+    println!("{x}")
 }
 
 fn another_function() {

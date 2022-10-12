@@ -3,6 +3,7 @@ mod functions;
 mod guessing_game;
 mod ownership;
 mod variables;
+mod references_and_borrowing;
 
 use control_flow::control_flow;
 use control_flow::fibonacci;
@@ -14,6 +15,7 @@ use crate::functions::another_function_params;
 use crate::functions::expression;
 use crate::functions::print_labeled_measurement;
 use crate::guessing_game::guessing_game;
+use crate::references_and_borrowing::references;
 use crate::variables::enter_array;
 use crate::variables::variables;
 
@@ -33,6 +35,7 @@ fn main() {
     ownership();
     ownership2();
     tuple_ex();
+    references();
 }
 
 fn another_function() {

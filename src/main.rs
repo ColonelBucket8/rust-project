@@ -2,14 +2,16 @@ mod control_flow;
 mod functions;
 mod guessing_game;
 mod ownership;
-mod variables;
 mod references_and_borrowing;
+mod the_slice_type;
+mod variables;
 
 use control_flow::control_flow;
 use control_flow::fibonacci;
 use control_flow::nested_loops;
 use control_flow::while_loop;
 use ownership::{ownership, ownership2, tuple_ex};
+use the_slice_type::the_slice_type;
 
 use crate::functions::another_function_params;
 use crate::functions::expression;
@@ -36,6 +38,7 @@ fn main() {
     ownership2();
     tuple_ex();
     references();
+    the_slice_type();
 }
 
 fn another_function() {

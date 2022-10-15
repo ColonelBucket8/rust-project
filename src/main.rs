@@ -6,6 +6,7 @@ mod references_and_borrowing;
 mod the_slice_type;
 mod variables;
 mod structs;
+mod enum_and_pattern_matching;
 
 use control_flow::control_flow;
 use control_flow::fibonacci;
@@ -14,6 +15,7 @@ use control_flow::while_loop;
 use ownership::{ownership, ownership2, tuple_ex};
 use the_slice_type::the_slice_type;
 
+use crate::enum_and_pattern_matching::enumeration;
 use crate::functions::another_function_params;
 use crate::functions::expression;
 use crate::functions::print_labeled_measurement;
@@ -44,6 +46,7 @@ fn main() {
     the_slice_type();
     defining_structs();
     rectangles();
+    enumeration();
 }
 
 fn another_function() {

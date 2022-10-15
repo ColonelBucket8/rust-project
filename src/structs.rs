@@ -14,6 +14,28 @@ struct Rectangle {
     height: u32,
 }
 
+// Method
+// Implementation
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+    // can give method name the same name as one of the struct's field
+    fn width(&self) -> bool {
+        self.width > 0
+    }
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+    // Associated function
+    fn square(size: u32) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
+    }
+}
+
 pub fn defining_structs() {
     let user1 = User {
         email: String::from("someone@example.com"),
@@ -70,12 +92,29 @@ pub fn rectangles() {
     };
 
     let rect2 = Rectangle {
-        width: dbg!(30 * scale),
-        height: 50,
+        width: dbg!(10 * scale),
+        height: 40,
     };
 
+    let rect3 = Rectangle {
+        width: 60,
+        height: 45,
+    };
+
+    // Associated function
+    let square1 = Rectangle::square(30);
+
+    println!("The area of rectangle is {}", area(&rect1));
     println!("react1 is {:?}", rect1);
     dbg!(&rect2);
+
+    println!("The area of rectangle is {} square pixels.", rect1.area());
+    println!("The rectangle has a nonzero width; it is {}", rect1.width());
+
+    println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
+    println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
+
+    println!("The area of square is {:?}", square1);
 }
 
 fn area(rectangle: &Rectangle) -> u32 {

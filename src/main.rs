@@ -5,6 +5,7 @@ mod ownership;
 mod references_and_borrowing;
 mod the_slice_type;
 mod variables;
+mod structs;
 
 use control_flow::control_flow;
 use control_flow::fibonacci;
@@ -18,6 +19,7 @@ use crate::functions::expression;
 use crate::functions::print_labeled_measurement;
 use crate::guessing_game::guessing_game;
 use crate::references_and_borrowing::references;
+use crate::structs::defining_structs;
 use crate::variables::enter_array;
 use crate::variables::variables;
 
@@ -39,6 +41,7 @@ fn main() {
     tuple_ex();
     references();
     the_slice_type();
+    defining_structs();
 }
 
 fn another_function() {

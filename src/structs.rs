@@ -8,6 +8,12 @@ struct User {
 struct Color(i32, i32, i32);
 struct Point(i32, i32, i32);
 
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
 pub fn defining_structs() {
     let user1 = User {
         email: String::from("someone@example.com"),
@@ -54,4 +60,24 @@ fn build_user(email: String, username: String) -> User {
         active: true,
         sign_in_count: 1,
     }
+}
+
+pub fn rectangles() {
+    let scale = 2;
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    let rect2 = Rectangle {
+        width: dbg!(30 * scale),
+        height: 50,
+    };
+
+    println!("react1 is {:?}", rect1);
+    dbg!(&rect2);
+}
+
+fn area(rectangle: &Rectangle) -> u32 {
+    rectangle.width * rectangle.height
 }

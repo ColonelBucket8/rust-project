@@ -20,6 +20,7 @@ use crate::functions::print_labeled_measurement;
 use crate::guessing_game::guessing_game;
 use crate::references_and_borrowing::references;
 use crate::structs::defining_structs;
+use crate::structs::rectangles;
 use crate::variables::enter_array;
 use crate::variables::variables;
 
@@ -42,6 +43,7 @@ fn main() {
     references();
     the_slice_type();
     defining_structs();
+    rectangles();
 }
 
 fn another_function() {

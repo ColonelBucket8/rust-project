@@ -85,6 +85,14 @@ pub fn enumeration() {
         // empty tuple
         // _ => (),
     }
+
+    // if let
+    let config_max = Some(3u8);
+    if let Some(max) = config_max {
+        println!("The maximum is configured to be {}", max);
+    }
+
+    print_quarter(Coin::Quarter(UsState::Alaska));
 }
 
 fn value_in_cents(coin: Coin) -> u8 {
@@ -99,6 +107,16 @@ fn value_in_cents(coin: Coin) -> u8 {
             println!("State quarter from {:?}!", state);
             25
         }
+    }
+}
+
+// if let
+fn print_quarter(coin: Coin) {
+    let mut count = 0;
+    if let Coin::Quarter(state) = coin {
+        println!("State quarter form {:?}", state);
+    } else {
+        count += 1;
     }
 }
 

@@ -1,30 +1,25 @@
 mod control_flow;
+mod enum_and_pattern_matching;
 mod functions;
 mod guessing_game;
 mod ownership;
 mod references_and_borrowing;
+mod structs;
 mod the_slice_type;
 mod variables;
-mod structs;
-mod enum_and_pattern_matching;
+mod common_collections;
 
-use control_flow::control_flow;
-use control_flow::fibonacci;
-use control_flow::nested_loops;
-use control_flow::while_loop;
+use control_flow::{control_flow, fibonacci, nested_loops, while_loop};
+use enum_and_pattern_matching::enumeration;
+use functions::{another_function_params, expression, print_labeled_measurement};
+use guessing_game::guessing_game;
 use ownership::{ownership, ownership2, tuple_ex};
+use references_and_borrowing::references;
+use structs::{defining_structs, rectangles};
 use the_slice_type::the_slice_type;
+use variables::{enter_array, variables};
 
-use crate::enum_and_pattern_matching::enumeration;
-use crate::functions::another_function_params;
-use crate::functions::expression;
-use crate::functions::print_labeled_measurement;
-use crate::guessing_game::guessing_game;
-use crate::references_and_borrowing::references;
-use crate::structs::defining_structs;
-use crate::structs::rectangles;
-use crate::variables::enter_array;
-use crate::variables::variables;
+use crate::common_collections::vectors;
 
 fn main() {
     // guessing_game();
@@ -47,6 +42,7 @@ fn main() {
     defining_structs();
     rectangles();
     enumeration();
+    vectors();
 }
 
 fn another_function() {

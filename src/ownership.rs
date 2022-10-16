@@ -1,7 +1,7 @@
 pub fn ownership() {
     // String is immutable by default
     let s = "Hello";
-
+    
     // Make it mutable
     let mut s = String::from("Hello");
 

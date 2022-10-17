@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 #[derive(Debug)]
 enum SpreadsheetCell {
     Int(i32),
@@ -97,4 +99,45 @@ pub fn store_string() {
     for b in "hello".bytes() {
         println!("{}", b);
     }
+}
+
+pub fn hash_map() {
+    let mut scores = HashMap::new();
+
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Yellow"), 50);
+
+    println!("hash map {:?}", scores);
+
+    let team_name = String::from("Blue");
+    // copied()
+    // get Option<T> rather than Option<&T>
+    let score = scores.get(&team_name).copied().unwrap_or(0);
+
+    println!("score {}", score);
+
+    for (key, value) in &scores {
+        println!("{}: {}", key, value);
+    }
+
+    scores.insert(String::from("Blue"), 25);
+
+    println!("blue overwrite to {}", scores.get(&String::from("Blue")).unwrap_or(&0));
+
+    scores.entry(String::from("Yellow")).or_insert(50);
+    scores.entry(String::from("Blue")).or_insert(50);
+
+    println!("after entry {:?}", scores);
+
+    let text = "hello world wonderful world";
+     
+    let mut map = HashMap::new();
+
+    for word in text.split_whitespace() {
+        let count = map.entry(word).or_insert(0);
+        *count += 1;
+    }
+
+    println!("{:?}", map);
+
 }

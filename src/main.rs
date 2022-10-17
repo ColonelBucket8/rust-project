@@ -19,7 +19,7 @@ use structs::{defining_structs, rectangles};
 use the_slice_type::the_slice_type;
 use variables::{enter_array, variables};
 
-use crate::common_collections::{vectors, store_string};
+use crate::common_collections::{vectors, store_string, hash_map};
 
 fn main() {
     // guessing_game();
@@ -44,6 +44,7 @@ fn main() {
     enumeration();
     vectors();
     store_string();
+    hash_map();
 }
 
 fn another_function() {

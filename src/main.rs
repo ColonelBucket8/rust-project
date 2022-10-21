@@ -8,6 +8,7 @@ mod structs;
 mod the_slice_type;
 mod variables;
 mod common_collections;
+mod error_handling;
 
 use control_flow::{control_flow, fibonacci, nested_loops, while_loop};
 use enum_and_pattern_matching::enumeration;
@@ -19,7 +20,7 @@ use structs::{defining_structs, rectangles};
 use the_slice_type::the_slice_type;
 use variables::{enter_array, variables};
 
-use crate::common_collections::{vectors, store_string, hash_map};
+use crate::{common_collections::{vectors, store_string, hash_map}, error_handling::error_handling};
 
 fn main() {
     // guessing_game();
@@ -45,6 +46,7 @@ fn main() {
     vectors();
     store_string();
     hash_map();
+    error_handling();
 }
 
 fn another_function() {

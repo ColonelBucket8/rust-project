@@ -1,6 +1,24 @@
 use std::fs::File;
 use std::io::{self, ErrorKind, Read};
 
+pub struct Guess {
+    value: i32,
+}
+
+impl Guess {
+    pub fn new(value: i32) -> Guess {
+        if value < 1 || value > 100 {
+            panic!("Guess value must be between 1 and 100, got {}.", value);
+        }
+
+        Guess { value }
+    }
+
+    pub fn value(&self) -> i32 {
+        self.value
+    }
+}
+
 pub fn error_handling() {
     let greeting_file_result = File::open("hello.txt");
 
@@ -39,6 +57,10 @@ pub fn error_handling() {
     let from_username_3 = read_username_from_file_v3();
 
     println!("read username from file v3 {:?}", from_username_3);
+
+    let guess_number = Guess::new(10);
+
+    println!("the number of guess is {}", guess_number.value);
 }
 
 // Using closures and if else

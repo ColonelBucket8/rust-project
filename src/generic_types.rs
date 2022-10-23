@@ -71,6 +71,9 @@ pub fn generic_types() {
     let p3 = p1.mixup(p2);
 
     println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
+
+    let largest_number = get_largest_v2(&number_list);
+    println!("largest number {}", largest_number);
 }
 
 fn get_largest(list: &[i32]) -> &i32 {
@@ -85,14 +88,15 @@ fn get_largest(list: &[i32]) -> &i32 {
     largest
 }
 
-// fn get_largest_v2<T>(list: &[T]) -> &T {
-//     let mut largest = &list[0];
+fn get_largest_v2<T: PartialOrd>(list: &[T]) -> &T {
+    let mut largest = &list[0];
 
-//     for item in list {
-//         if item > largest {
-//             largest = item;
-//         }
-//     }
+    for item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
 
-//     largest
-// }
+    largest
+}
+

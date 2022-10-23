@@ -10,6 +10,7 @@ mod variables;
 mod common_collections;
 mod error_handling;
 mod generic_types;
+mod traits;
 
 use control_flow::{control_flow, fibonacci, nested_loops, while_loop};
 use enum_and_pattern_matching::enumeration;
@@ -20,6 +21,7 @@ use references_and_borrowing::references;
 use structs::{defining_structs, rectangles};
 use the_slice_type::the_slice_type;
 use variables::{enter_array, variables};
+use traits::traits_ex;
 
 use crate::{common_collections::{vectors, store_string, hash_map}, error_handling::error_handling, generic_types::generic_types};
 
@@ -49,6 +51,7 @@ fn main() {
     hash_map();
     error_handling();
     generic_types();
+    traits_ex();
 }
 
 fn another_function() {

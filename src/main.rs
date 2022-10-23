@@ -1,29 +1,35 @@
+mod common_collections;
 mod control_flow;
 mod enum_and_pattern_matching;
+mod error_handling;
 mod functions;
+mod generic_types;
 mod guessing_game;
+mod lifetimes;
 mod ownership;
 mod references_and_borrowing;
 mod structs;
 mod the_slice_type;
-mod variables;
-mod common_collections;
-mod error_handling;
-mod generic_types;
 mod traits;
+mod variables;
 
 use control_flow::{control_flow, fibonacci, nested_loops, while_loop};
 use enum_and_pattern_matching::enumeration;
 use functions::{another_function_params, expression, print_labeled_measurement};
 use guessing_game::guessing_game;
+use lifetimes::lifetimes;
 use ownership::{ownership, ownership2, tuple_ex};
 use references_and_borrowing::references;
 use structs::{defining_structs, rectangles};
 use the_slice_type::the_slice_type;
-use variables::{enter_array, variables};
 use traits::traits_ex;
+use variables::{enter_array, variables};
 
-use crate::{common_collections::{vectors, store_string, hash_map}, error_handling::error_handling, generic_types::generic_types};
+use crate::{
+    common_collections::{hash_map, store_string, vectors},
+    error_handling::error_handling,
+    generic_types::generic_types,
+};
 
 fn main() {
     // guessing_game();
@@ -52,6 +58,7 @@ fn main() {
     error_handling();
     generic_types();
     traits_ex();
+    lifetimes();
 }
 
 fn another_function() {

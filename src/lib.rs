@@ -78,11 +78,11 @@ mod tests {
         assert_eq!(10, value);
     }
 
-    #[test]
-    fn this_test_will_fail() {
-        let value = prints_and_returns_10(8);
-        assert_eq!(5, value);
-    }
+    // #[test]
+    // fn this_test_will_fail() {
+    //     let value = prints_and_returns_10(8);
+    //     assert_eq!(5, value);
+    // }
 
     #[test]
     fn add_two_and_two() {

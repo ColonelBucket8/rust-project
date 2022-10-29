@@ -1,3 +1,5 @@
+mod closures;
+
 #[cfg(test)]
 mod tests {
     use super::*;

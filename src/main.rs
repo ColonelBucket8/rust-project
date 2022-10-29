@@ -1,3 +1,4 @@
+mod closures;
 mod common_collections;
 mod control_flow;
 mod enum_and_pattern_matching;
@@ -12,8 +13,8 @@ mod structs;
 mod the_slice_type;
 mod traits;
 mod variables;
-mod closures;
 
+use closures::{closures, iterator};
 use control_flow::{control_flow, fibonacci, nested_loops, while_loop};
 use enum_and_pattern_matching::enumeration;
 use functions::{another_function_params, expression, print_labeled_measurement};
@@ -25,7 +26,6 @@ use structs::{defining_structs, rectangles};
 use the_slice_type::the_slice_type;
 use traits::traits_ex;
 use variables::{enter_array, variables};
-use closures::closures;
 
 use crate::{
     common_collections::{hash_map, store_string, vectors},
@@ -62,6 +62,7 @@ fn main() {
     traits_ex();
     lifetimes();
     closures();
+    iterator();
 }
 
 fn another_function() {

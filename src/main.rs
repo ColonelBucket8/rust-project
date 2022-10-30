@@ -13,6 +13,7 @@ mod structs;
 mod the_slice_type;
 mod traits;
 mod variables;
+mod smart_pointers;
 
 use closures::{closures, iterator};
 use control_flow::{control_flow, fibonacci, nested_loops, while_loop};
@@ -26,6 +27,7 @@ use structs::{defining_structs, rectangles};
 use the_slice_type::the_slice_type;
 use traits::traits_ex;
 use variables::{enter_array, variables};
+use smart_pointers::smart_pointers;
 
 use crate::{
     common_collections::{hash_map, store_string, vectors},
@@ -63,6 +65,7 @@ fn main() {
     lifetimes();
     closures();
     iterator();
+    smart_pointers();
 }
 
 fn another_function() {

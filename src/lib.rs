@@ -1,8 +1,6 @@
 //! # Rust Project
 //! Rust project is a code from The Rust Programming Language book for educational purposes
 
-mod closures;
-
 #[cfg(test)]
 mod tests {
     use super::*;

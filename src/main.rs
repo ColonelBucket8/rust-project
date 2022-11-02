@@ -7,13 +7,14 @@ mod functions;
 mod generic_types;
 mod guessing_game;
 mod lifetimes;
+mod multi_thread;
 mod ownership;
 mod references_and_borrowing;
+mod smart_pointers;
 mod structs;
 mod the_slice_type;
 mod traits;
 mod variables;
-mod smart_pointers;
 
 use closures::{closures, iterator};
 use control_flow::{control_flow, fibonacci, nested_loops, while_loop};
@@ -21,13 +22,14 @@ use enum_and_pattern_matching::enumeration;
 use functions::{another_function_params, expression, print_labeled_measurement};
 use guessing_game::guessing_game;
 use lifetimes::lifetimes;
+use multi_thread::multi_thread;
 use ownership::{ownership, ownership2, tuple_ex};
 use references_and_borrowing::references;
+use smart_pointers::smart_pointers;
 use structs::{defining_structs, rectangles};
 use the_slice_type::the_slice_type;
 use traits::traits_ex;
 use variables::{enter_array, variables};
-use smart_pointers::smart_pointers;
 
 use crate::{
     common_collections::{hash_map, store_string, vectors},
@@ -66,6 +68,7 @@ fn main() {
     closures();
     iterator();
     smart_pointers();
+    multi_thread();
 }
 
 fn another_function() {

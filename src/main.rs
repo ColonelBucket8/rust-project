@@ -9,6 +9,7 @@ mod guessing_game;
 mod lifetimes;
 mod multi_thread;
 mod oop;
+mod oop_pattern;
 mod ownership;
 mod references_and_borrowing;
 mod smart_pointers;
@@ -25,6 +26,7 @@ use guessing_game::guessing_game;
 use lifetimes::lifetimes;
 use multi_thread::multi_thread;
 use oop::oop;
+use oop_pattern::oop_pattern;
 use ownership::{ownership, ownership2, tuple_ex};
 use references_and_borrowing::references;
 use smart_pointers::smart_pointers;
@@ -72,6 +74,7 @@ fn main() {
     smart_pointers();
     multi_thread();
     oop();
+    oop_pattern();
 }
 
 fn another_function() {

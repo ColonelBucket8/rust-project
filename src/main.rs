@@ -8,6 +8,7 @@ mod generic_types;
 mod guessing_game;
 mod lifetimes;
 mod multi_thread;
+mod oop;
 mod ownership;
 mod references_and_borrowing;
 mod smart_pointers;
@@ -23,6 +24,7 @@ use functions::{another_function_params, expression, print_labeled_measurement};
 use guessing_game::guessing_game;
 use lifetimes::lifetimes;
 use multi_thread::multi_thread;
+use oop::oop;
 use ownership::{ownership, ownership2, tuple_ex};
 use references_and_borrowing::references;
 use smart_pointers::smart_pointers;
@@ -69,6 +71,7 @@ fn main() {
     iterator();
     smart_pointers();
     multi_thread();
+    oop();
 }
 
 fn another_function() {

@@ -11,6 +11,7 @@ mod multi_thread;
 mod oop;
 mod oop_pattern;
 mod ownership;
+mod patterns_and_matching;
 mod references_and_borrowing;
 mod smart_pointers;
 mod structs;
@@ -28,6 +29,7 @@ use multi_thread::multi_thread;
 use oop::oop;
 use oop_pattern::oop_pattern;
 use ownership::{ownership, ownership2, tuple_ex};
+use patterns_and_matching::patterns_and_matching;
 use references_and_borrowing::references;
 use smart_pointers::smart_pointers;
 use structs::{defining_structs, rectangles};
@@ -75,7 +77,9 @@ fn main() {
     multi_thread();
     oop();
     oop_pattern();
+    patterns_and_matching();
 }
+
 
 fn another_function() {
     println!("Another function");

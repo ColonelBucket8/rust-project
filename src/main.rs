@@ -10,6 +10,7 @@ mod functions;
 mod generic_types;
 mod guessing_game;
 mod lifetimes;
+mod macros;
 mod multi_thread;
 mod oop;
 mod oop_pattern;
@@ -32,6 +33,7 @@ use enum_and_pattern_matching::enumeration;
 use functions::{another_function_params, expression, print_labeled_measurement};
 use guessing_game::guessing_game;
 use lifetimes::lifetimes;
+use macros::macros;
 use multi_thread::multi_thread;
 use oop::oop;
 use oop_pattern::oop_pattern;
@@ -90,6 +92,7 @@ fn main() {
     advanced_traits();
     advanced_types();
     advanced_functions_and_closures();
+    macros();
 }
 
 fn another_function() {

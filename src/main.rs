@@ -18,6 +18,7 @@ mod structs;
 mod the_slice_type;
 mod traits;
 mod variables;
+mod unsafe_rust;
 
 use closures::{closures, iterator};
 use control_flow::{control_flow, fibonacci, nested_loops, while_loop};
@@ -36,6 +37,7 @@ use structs::{defining_structs, rectangles};
 use the_slice_type::the_slice_type;
 use traits::traits_ex;
 use variables::{enter_array, variables};
+use unsafe_rust::unsafe_rust;
 
 use crate::{
     common_collections::{hash_map, store_string, vectors},
@@ -78,6 +80,7 @@ fn main() {
     oop();
     oop_pattern();
     patterns_and_matching();
+    unsafe_rust();
 }
 
 

@@ -38,6 +38,7 @@ pub fn unsafe_rust() {
 
     add_to_count(3);
 
+    println!("hello world {}", HELLO_WORLD);
     unsafe {
         println!("COUNTER: {}", COUNTER);
     }

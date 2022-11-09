@@ -1,3 +1,4 @@
+mod advanced_traits;
 mod closures;
 mod common_collections;
 mod control_flow;
@@ -17,9 +18,10 @@ mod smart_pointers;
 mod structs;
 mod the_slice_type;
 mod traits;
-mod variables;
 mod unsafe_rust;
+mod variables;
 
+use advanced_traits::advanced_traits;
 use closures::{closures, iterator};
 use control_flow::{control_flow, fibonacci, nested_loops, while_loop};
 use enum_and_pattern_matching::enumeration;
@@ -36,8 +38,8 @@ use smart_pointers::smart_pointers;
 use structs::{defining_structs, rectangles};
 use the_slice_type::the_slice_type;
 use traits::traits_ex;
-use variables::{enter_array, variables};
 use unsafe_rust::unsafe_rust;
+use variables::{enter_array, variables};
 
 use crate::{
     common_collections::{hash_map, store_string, vectors},
@@ -81,8 +83,8 @@ fn main() {
     oop_pattern();
     patterns_and_matching();
     unsafe_rust();
+    advanced_traits();
 }
-
 
 fn another_function() {
     println!("Another function");

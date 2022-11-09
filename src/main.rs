@@ -1,3 +1,4 @@
+mod advanced_functions_and_closures;
 mod advanced_traits;
 mod advanced_types;
 mod closures;
@@ -22,6 +23,7 @@ mod traits;
 mod unsafe_rust;
 mod variables;
 
+use advanced_functions_and_closures::advanced_functions_and_closures;
 use advanced_traits::advanced_traits;
 use advanced_types::advanced_types;
 use closures::{closures, iterator};
@@ -87,6 +89,7 @@ fn main() {
     unsafe_rust();
     advanced_traits();
     advanced_types();
+    advanced_functions_and_closures();
 }
 
 fn another_function() {

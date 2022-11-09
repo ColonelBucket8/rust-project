@@ -1,4 +1,5 @@
 mod advanced_traits;
+mod advanced_types;
 mod closures;
 mod common_collections;
 mod control_flow;
@@ -22,6 +23,7 @@ mod unsafe_rust;
 mod variables;
 
 use advanced_traits::advanced_traits;
+use advanced_types::advanced_types;
 use closures::{closures, iterator};
 use control_flow::{control_flow, fibonacci, nested_loops, while_loop};
 use enum_and_pattern_matching::enumeration;
@@ -84,6 +86,7 @@ fn main() {
     patterns_and_matching();
     unsafe_rust();
     advanced_traits();
+    advanced_types();
 }
 
 fn another_function() {
